@@ -102,7 +102,7 @@ def generate_resume(output_path):
     story.append(Paragraph("Jay Sitapara", title_style))
     story.append(Spacer(1, 4))
     story.append(Paragraph("Rajkot, Gujarat &nbsp;|&nbsp; +91 9104297422 &nbsp;|&nbsp; jaysitapara5103@gmail.com", contact_style))
-    story.append(Paragraph("linkedin.com/in/jay-sitapara &nbsp;|&nbsp; github.com/jaysitapara", contact_style))
+    story.append(Paragraph("linkedin.com/in/jay-sitapara-170b161b8 &nbsp;|&nbsp; github.com/jaysitapara", contact_style))
     story.append(Spacer(1, 8))
 
     def add_section_header(title):
