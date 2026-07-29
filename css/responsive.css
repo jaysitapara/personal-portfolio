@@ -1,0 +1,208 @@
+/* ==========================================================================
+   JAY SITAPARA - RESPONSIVE STYLESHEET (css/responsive.css)
+   Media Queries & Mobile-First Adaptations
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. LAPTOPS & SMALL DESKTOPS (<= 1199px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+  .hero-title {
+    font-size: 3.25rem;
+  }
+  
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2.5rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. TABLETS & SMALL LAPTOPS (<= 991px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .section {
+    padding: 4.5rem 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-badge, .typing-container, .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+
+  .avatar-card {
+    max-width: 320px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-stats-grid {
+    order: 2;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  /* Mobile Navigation Menu */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 360px;
+    height: 100vh;
+    background: rgba(11, 15, 36, 0.96);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.25rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.7);
+    transition: right var(--transition-normal);
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.15rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. MOBILE PHONES (<= 767px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .typing-container {
+    font-size: 1.35rem;
+    min-height: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+  }
+
+  .about-highlight-list {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-line {
+    left: 18px;
+  }
+
+  .timeline-node {
+    left: 4px;
+    width: 26px;
+    height: 26px;
+  }
+
+  .timeline-item {
+    padding-left: 45px;
+  }
+
+  .timeline-card {
+    padding: 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-form-card {
+    padding: 1.5rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. SMALL MOBILE PHONES (<= 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .stat-number {
+    font-size: 2.25rem;
+  }
+
+  .stat-card {
+    padding: 1.25rem 0.85rem;
+  }
+
+  .avatar-card {
+    max-width: 280px;
+  }
+
+  .avatar-image-wrapper {
+    height: 280px;
+  }
+}

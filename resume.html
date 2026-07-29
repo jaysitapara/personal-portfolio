@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jay Sitapara - Resume / CV</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      color: #111111;
+      background: #f8fafc;
+      line-height: 1.5;
+      padding: 2rem;
+    }
+    .resume-paper {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 1.75rem;
+      border-bottom: 2px solid #1e293b;
+      padding-bottom: 1rem;
+    }
+    .header h1 {
+      font-size: 2.4rem;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+    .contact-info {
+      font-size: 0.95rem;
+      color: #475569;
+      margin-top: 0.4rem;
+    }
+    .contact-info a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .section-title {
+      font-size: 1.25rem;
+      color: #0f172a;
+      border-bottom: 1.5px solid #cbd5e1;
+      padding-bottom: 0.3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    p, li {
+      font-size: 0.96rem;
+      color: #334155;
+    }
+    ul {
+      padding-left: 1.25rem;
+      margin-top: 0.4rem;
+    }
+    li {
+      margin-bottom: 0.35rem;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 600;
+      color: #0f172a;
+    }
+    .item-sub {
+      display: flex;
+      justify-content: space-between;
+      font-style: italic;
+      color: #475569;
+      font-size: 0.92rem;
+      margin-bottom: 0.35rem;
+    }
+    .tech-stack-line {
+      font-size: 0.88rem;
+      color: #2563eb;
+      font-style: italic;
+      margin-bottom: 0.35rem;
+    }
+    .no-print-bar {
+      max-width: 850px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn {
+      padding: 0.6rem 1.4rem;
+      background: #2563eb;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .btn-secondary {
+      background: #475569;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .no-print-bar {
+        display: none !important;
+      }
+      .resume-paper {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      h1, h2, h3 {
+        page-break-after: avoid;
+      }
+      .experience-block, .project-block {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print-bar">
+    <a href="index.html" class="btn btn-secondary">&larr; Back to Portfolio</a>
+    <div style="display: flex; gap: 0.75rem;">
+      <a href="Jay_Sitapara_Resume.pdf" download="Jay_Sitapara_Resume.pdf" class="btn">📥 Download PDF Resume</a>
+      <button onclick="window.print()" class="btn btn-secondary">🖨️ Print / Save PDF</button>
+    </div>
+  </div>
+
+  <div class="resume-paper">
+    <header class="header">
+      <h1>Jay Sitapara</h1>
+      <div class="contact-info">
+        Rajkot, Gujarat &bull; +91 9104297422 &bull; <a href="mailto:jaysitapara5103@gmail.com">jaysitapara5103@gmail.com</a>
+        <br>
+        <a href="https://linkedin.com/in/jay-sitapara" target="_blank">linkedin.com/in/jay-sitapara</a> &bull; 
+        <a href="https://github.com/jaysitapara" target="_blank">github.com/jaysitapara</a>
+      </div>
+    </header>
+
+    <!-- Summary -->
+    <section>
+      <h2 class="section-title">Summary</h2>
+      <p>
+        Full Stack Software Engineer with 1.5+ years of experience in MERN stack development. Skilled in Node.js, Express.js, React.js, TypeScript, MongoDB, REST APIs, and JWT authentication. Experienced with OpenAI API, AWS, Stripe, Firebase, and third-party integrations.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2 class="section-title">Education</h2>
+      
+      <div style="margin-bottom: 0.75rem;">
+        <div class="item-header">
+          <span>Marwadi University</span>
+          <span>Rajkot, Gujarat</span>
+        </div>
+        <div class="item-sub">
+          <span>Master of Computer Applications (MCA)</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="item-header">
+          <span>Saurashtra University</span>
+          <span>Rajkot, Gujarat</span>
+        </div>
+        <div class="item-sub">
+          <span>Bachelor of Computer Applications (BCA)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section>
+      <h2 class="section-title">Technical Skills</h2>
+      <ul style="list-style-type: none; padding-left: 0;">
+        <li><strong>Programming Languages:</strong> JavaScript (ES6+), TypeScript</li>
+        <li><strong>Frontend:</strong> React.js, HTML5, CSS3, Tailwind CSS, Responsive Web Design</li>
+        <li><strong>Backend:</strong> Node.js, Express.js, REST API Development, Middleware, Socket.IO</li>
+        <li><strong>Databases:</strong> MongoDB, SQL, Schema Design, Indexing</li>
+        <li><strong>Authentication & Security:</strong> JWT Authentication, Role-Based Access Control (RBAC), API Security, Input Validation</li>
+        <li><strong>Cloud & Integrations:</strong> AWS, OpenAI API, Stripe, Firebase Cloud Messaging (FCM)</li>
+        <li><strong>Developer Tools:</strong> Git, GitHub, Postman, VS Code, npm</li>
+        <li><strong>Software Development:</strong> Object-Oriented Programming (OOP), MVC Architecture, Agile Methodology, Debugging, Code Review, Performance Optimization</li>
+      </ul>
+    </section>
+
+    <!-- Professional Experience -->
+    <section>
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="experience-block" style="margin-bottom: 1.25rem;">
+        <div class="item-header">
+          <span>Empyreal Infotech</span>
+          <span>Jul 2025 – Present</span>
+        </div>
+        <div class="item-sub">
+          <span>Full Stack Software Engineer (MERN)</span>
+          <span>Rajkot, Gujarat</span>
+        </div>
+        <ul>
+          <li>Built cloud-based MERN applications using TypeScript for 5+ enterprise clients, maintaining 99% uptime.</li>
+          <li>Designed REST APIs and MongoDB schemas, reducing database retrieval time by 50% and improving application security.</li>
+          <li>Integrated OpenAI API, Stripe, and AWS services into multiple applications while building reusable React components that reduced development time by 50%.</li>
+          <li>Worked with cross-functional teams in an Agile environment to deliver software updates 20% faster while maintaining high code quality.</li>
+        </ul>
+      </div>
+
+      <div class="experience-block">
+        <div class="item-header">
+          <span>Empyreal Infotech</span>
+          <span>Jan 2025 – Jun 2025</span>
+        </div>
+        <div class="item-sub">
+          <span>MERN Stack Developer Intern</span>
+          <span>Rajkot, Gujarat</span>
+        </div>
+        <ul>
+          <li>Built commercial web applications and delivered 3 major features during the internship.</li>
+          <li>Designed and optimized REST APIs and MongoDB queries to support JWT authentication for over 1,000 daily requests.</li>
+          <li>Built reusable React.js components and resolved more than 50 critical bugs before production releases.</li>
+          <li>Collaborated in Agile sprints to deliver more than 10 frontend modules on schedule while maintaining code quality.</li>
+          <li>Participated in API testing, debugging, and code reviews, resolving more than 50 issues before production deployment.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project-block" style="margin-bottom: 1rem;">
+        <div style="font-weight: 700; color: #0f172a; font-size: 1.05rem;">Scout Robotics — Railway Monitoring Dashboard</div>
+        <div class="tech-stack-line">React.js | Node.js | Express.js | MongoDB | AWS</div>
+        <ul>
+          <li>Created a railway monitoring dashboard for a USA-based client to track more than 500 trains daily.</li>
+          <li>Developed responsive data visualization modules integrated with AWS services, providing real-time insights with less than 200ms latency.</li>
+          <li>Built REST APIs to process live data streams and generate more than 5 scheduled reports and system health alerts daily.</li>
+          <li>Optimized React.js components, reducing dashboard load time by 35% and improving user experience.</li>
+          <li>Collaborated with stakeholders to resolve production issues, achieving a 95% resolution rate within 48 hours.</li>
+        </ul>
+      </div>
+
+      <div class="project-block" style="margin-bottom: 1rem;">
+        <div style="font-weight: 700; color: #0f172a; font-size: 1.05rem;">OVE — Women’s Health & Period Tracking Platform</div>
+        <div class="tech-stack-line">React.js | Node.js | Express.js | MongoDB | OpenAI API | Stripe | Firebase</div>
+        <ul>
+          <li>Engineered a full-stack healthcare platform supporting more than 75,000 concurrent users across web and mobile applications.</li>
+          <li>Architected MongoDB schemas and established access controls to securely manage over 50,000 health records.</li>
+          <li>Integrated OpenAI API to provide AI-powered health assistance, increasing daily user engagement by 40%.</li>
+          <li>Configured Stripe, Firebase Cloud Messaging (FCM), and scheduled cron jobs to process over 2,000 monthly transactions and notifications.</li>
+          <li>Built a modular backend architecture with middleware validation, reducing server-side errors by 50%.</li>
+        </ul>
+      </div>
+
+      <div class="project-block" style="margin-bottom: 1rem;">
+        <div style="font-weight: 700; color: #0f172a; font-size: 1.05rem;">Chance AI — AI-Powered Dating Platform</div>
+        <div class="tech-stack-line">React.js | Node.js | TypeScript | Express.js | MongoDB | Socket.IO | OpenAI API</div>
+        <ul>
+          <li>Engineered an AI-powered dating platform using React.js, Node.js, and TypeScript with a scalable application architecture.</li>
+          <li>Integrated OpenAI API to generate personalized user profiles, increasing profile completion by 25%.</li>
+          <li>Built real-time messaging using Socket.IO with message delivery under 50ms.</li>
+          <li>Implemented secure REST APIs and authentication to protect data for more than 1,000 active users.</li>
+          <li>Automated recurring subscription and payment workflows using Stripe, increasing subscription conversion by 15%.</li>
+        </ul>
+      </div>
+
+      <div class="project-block">
+        <div style="font-weight: 700; color: #0f172a; font-size: 1.05rem;">ARCC — Smart Biking & Ride Analytics Platform</div>
+        <div class="tech-stack-line">React.js | Node.js | Express.js | MongoDB | Socket.IO | JWT</div>
+        <ul>
+          <li>Built a real-time ride analytics platform for more than 1,000 active cyclists, processing live telemetry data including distance, duration, and speed.</li>
+          <li>Designed REST APIs with JWT authentication and request validation to ensure secure and reliable data processing.</li>
+          <li>Enabled live location tracking using Socket.IO, supporting real-time synchronization for over 100 concurrent users.</li>
+          <li>Created MongoDB schemas for efficient storage and analysis of historical ride data.</li>
+          <li>Refactored backend modules and reusable frontend components, reducing future development effort by an estimated 25%.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

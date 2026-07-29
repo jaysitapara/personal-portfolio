@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Jay Sitapara - Full Stack Software Engineer specializing in MERN Stack, React.js, Node.js, TypeScript, AWS, OpenAI API, & Stripe Integrations. Based in Rajkot, India.">
+  <meta name="keywords"
+    content="Jay Sitapara, Full Stack Developer, MERN Stack Developer, React Developer, Node.js, TypeScript, OpenAI API, AWS, Portfolio">
+  <meta name="author" content="Jay Sitapara">
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Jay Sitapara | Full Stack Software Engineer">
+  <meta property="og:description"
+    content="Portfolio of Jay Sitapara - 1.5+ years of experience building high-performance MERN applications, AI solutions, and cloud integrations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jaysitapara.com">
+
+  <title>Jay Sitapara | Full Stack Software Engineer</title>
+
+  <!-- Google Fonts: Poppins & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <!-- Background Interactive Canvas & Glows -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="glow-ambient glow-1"></div>
+  <div class="glow-ambient glow-2"></div>
+  <div class="glow-ambient glow-3"></div>
+  <div id="cursor-glow" class="cursor-glow"></div>
+
+  <!-- Header & Navigation -->
+  <header id="header" class="header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        Portfolio<span class="logo-dot"></span>
+      </a>
+
+      <nav>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm ripple">Hire Me</a>
+        <button id="hamburger" class="hamburger" aria-label="Toggle Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container">
+      <div id="scroll-progress-bar" class="scroll-progress-bar"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content reveal reveal-left">
+          <div class="hero-badge">
+            <span class="status-dot"></span> Available for Full-Time & Contracts
+          </div>
+
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-title">Jay Sitapara</h1>
+
+          <div class="typing-container">
+            <span id="typing-text"></span>
+            <span class="typing-cursor"></span>
+          </div>
+
+          <p class="hero-description">
+            Full Stack Developer with 1.5+ years of experience building scalable MERN stack web applications.
+            Specialized
+            in high-performance APIs, React frontend systems, OpenAI API, AWS cloud architecture, and Stripe payment
+            infrastructures.
+          </p>
+
+          <div class="hero-cta">
+            <a href="Jay_Sitapara_Resume.pdf" download="Jay_Sitapara_Resume.pdf" class="btn btn-primary ripple">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17" />
+              </svg>
+              Download Resume (PDF)
+            </a>
+
+            <button id="view-resume-btn" class="btn btn-secondary ripple">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+              Preview Resume
+            </button>
+
+            <a href="#projects" class="btn btn-outline ripple">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+              View Projects
+            </a>
+
+            <div class="social-links-row">
+              <a href="https://github.com/jaysitapara" target="_blank" class="social-icon-btn" aria-label="GitHub">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+              </a>
+              <a href="https://linkedin.com/in/jay-sitapara" target="_blank" class="social-icon-btn"
+                aria-label="LinkedIn">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </a>
+              <a href="mailto:jaysitapara5103@gmail.com" class="social-icon-btn" aria-label="Email">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal-right">
+          <div class="avatar-card float-animation">
+            <div class="avatar-image-wrapper">
+              <svg width="120" height="120" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"
+                style="color: var(--primary); opacity: 0.85;">
+                <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <div class="avatar-badge-tag">
+              <div class="avatar-badge-icon">⚡</div>
+              <div class="avatar-badge-text">
+                <h4>Full Stack Specialist</h4>
+                <p>MERN • Cloud • AI</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header reveal reveal-up">
+          <span class="section-tag">WHO I AM</span>
+          <h2 class="section-title">About <span class="gradient-text">Jay Sitapara</span></h2>
+          <p class="section-subtitle">Passionate about clean architecture, scalable backends, and elegant user
+            interfaces.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-content reveal reveal-left">
+            <p class="about-paragraph">
+              I am a dedicated <strong>Full Stack Software Engineer</strong> with over 1.5 years of professional
+              experience crafting scalable web applications. My core expertise centers on the <strong>MERN Stack
+                (MongoDB, Express.js, React.js, Node.js)</strong>, complemented by <strong>TypeScript</strong>,
+              <strong>REST APIs</strong>, and cloud integrations.
+            </p>
+            <p class="about-paragraph">
+              Throughout my journey at <em>Empyreal Infotech</em>, I have engineered complex enterprise backend
+              services, integrated state-of-the-art <strong>OpenAI APIs</strong>, integrated <strong>AWS Cloud
+                services</strong>, integrated <strong>Stripe payment gateways</strong>, and implemented high-performance
+              real-time features using <strong>Socket.IO</strong>.
+            </p>
+
+            <div class="about-highlight-list">
+              <div class="highlight-item">
+                <div class="highlight-icon">✓</div>
+                <div class="highlight-text">
+                  <h5>Clean Architecture</h5>
+                  <p>MVC & Maintainable Code</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">✓</div>
+                <div class="highlight-text">
+                  <h5>High Performance</h5>
+                  <p>Optimized MongoDB & APIs</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">✓</div>
+                <div class="highlight-text">
+                  <h5>AI Integrations</h5>
+                  <p>OpenAI GPT Pipelines</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">✓</div>
+                <div class="highlight-text">
+                  <h5>Cloud Solutions</h5>
+                  <p>AWS & Stripe Gateways</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-stats-grid reveal reveal-right">
+            <div class="glass-card stat-card">
+              <div class="stat-number counter-value" data-target="1.5" data-suffix="+">0</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="glass-card stat-card">
+              <div class="stat-number counter-value" data-target="5" data-suffix="+">0</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="glass-card stat-card">
+              <div class="stat-number counter-value" data-target="15" data-suffix="+">0</div>
+              <div class="stat-label">Tech Skills Mastered</div>
+            </div>
+            <div class="glass-card stat-card">
+              <div class="stat-number counter-value" data-target="100" data-suffix="k+">0</div>
+              <div class="stat-label">Lines of Code</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header reveal reveal-up">
+          <span class="section-tag">MY TECH STACK</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills & Expertise</span></h2>
+          <p class="section-subtitle">Categorized technologies and developer tools I leverage to build enterprise
+            applications.</p>
+        </div>
+
+        <div class="skills-categories-grid">
+          <!-- Languages -->
+          <div class="glass-card skill-category-card reveal reveal-up delay-1">
+            <div class="category-header">
+              <div class="category-icon">💻</div>
+              <h3 class="category-title">Languages</h3>
+            </div>
+            <div class="skills-tags-container">
+              <span class="skill-chip">JavaScript (ES6+)</span>
+              <span class="skill-chip">TypeScript</span>
+              <span class="skill-chip">HTML5</span>
+              <span class="skill-chip">CSS3</span>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="glass-card skill-category-card reveal reveal-up delay-2">
+            <div class="category-header">
+              <div class="category-icon">🎨</div>
+              <h3 class="category-title">Frontend</h3>
+            </div>
+            <div class="skills-tags-container">
+              <span class="skill-chip">React.js</span>
+              <span class="skill-chip">Tailwind CSS</span>
+              <span class="skill-chip">Responsive Design</span>
+              <span class="skill-chip">DOM Manipulation</span>
+              <span class="skill-chip">CSS Grid & Flexbox</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="glass-card skill-category-card reveal reveal-up delay-3">
+            <div class="category-header">
+              <div class="category-icon">⚙️</div>
+              <h3 class="category-title">Backend</h3>
+            </div>
+            <div class="skills-tags-container">
+              <span class="skill-chip">Node.js</span>
+              <span class="skill-chip">Express.js</span>
+              <span class="skill-chip">REST APIs</span>
+              <span class="skill-chip">Socket.IO</span>
+              <span class="skill-chip">Middleware</span>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="glass-card skill-category-card reveal reveal-up delay-4">
+            <div class="category-header">
+              <div class="category-icon">🗄️</div>
+              <h3 class="category-title">Database</h3>
+            </div>
+            <div class="skills-tags-container">
+              <span class="skill-chip">MongoDB</span>
+              <span class="skill-chip">SQL</span>
+              <span class="skill-chip">Mongoose ORM</span>
+              <span class="skill-chip">Query Optimization</span>
+            </div>
+          </div>
+
+          <!-- Cloud & Integrations -->
+          <div class="glass-card skill-category-card reveal reveal-up delay-5">
+            <div class="category-header">
+              <div class="category-icon">☁️</div>
+              <h3 class="category-title">Cloud & Integrations</h3>
+            </div>
+            <div class="skills-tags-container">
+              <span class="skill-chip">AWS Services</span>
+              <span class="skill-chip">OpenAI API</span>
+              <span class="skill-chip">Stripe Payment Gateway</span>
+              <span class="skill-chip">Firebase Cloud Messaging</span>
+            </div>
+          </div>
+
+          <!-- Auth & Dev Tools -->
+          <div class="glass-card skill-category-card reveal reveal-up delay-5">
+            <div class="category-header">
+              <div class="category-icon">🔐</div>
+              <h3 class="category-title">Auth & Developer Tools</h3>
+            </div>
+            <div class="skills-tags-container">
+              <span class="skill-chip">JWT Authentication</span>
+              <span class="skill-chip">Role-Based Access (RBAC)</span>
+              <span class="skill-chip">Git & GitHub</span>
+              <span class="skill-chip">Postman</span>
+              <span class="skill-chip">VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE SECTION -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header reveal reveal-up">
+          <span class="section-tag">CAREER JOURNEY</span>
+          <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+          <p class="section-subtitle">My professional journey building commercial and enterprise web solutions.</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Role 1 -->
+          <div class="timeline-item reveal reveal-up">
+            <div class="timeline-node">
+              <div class="timeline-node-inner"></div>
+            </div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-header">
+                <div class="company-title-group">
+                  <h3>Full Stack Software Engineer (MERN)</h3>
+                  <div class="company-name">Empyreal Infotech</div>
+                </div>
+                <div class="timeline-duration">July 2025 – Present</div>
+              </div>
+
+              <div class="responsibilities-list">
+                <div class="responsibility-item">
+                  <span class="responsibility-bullet">▹</span>
+                  <span>Developed cloud-based MERN applications for enterprise clients.</span>
+                </div>
+                <div class="responsibility-item">
+                  <span class="responsibility-bullet">▹</span>
+                  <span>Built scalable REST APIs and designed complex MongoDB schemas.</span>
+                </div>
+                <div class="responsibility-item">
+                  <span class="responsibility-bullet">▹</span>
+                  <span>Integrated OpenAI API for automated intelligent assistant workflows.</span>
+                </div>
+                <div class="responsibility-item">
+                  <span class="responsibility-bullet">▹</span>
+                  <span>Integrated AWS services & Stripe payment checkout gateways.</span>
+                </div>
+                <div class="responsibility-item">
+                  <span class="responsibility-bullet">▹</span>
+                  <span>Developed modular, reusable React frontend components in Agile environments.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="timeline-item reveal reveal-up delay-2">
+            <div class="timeline-node">
+              <div class="timeline-node-inner"></div>
+            </div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-header">
+                <div class="company-title-group">
+                  <h3>MERN Stack Developer Intern</h3>
+                  <div class="company-name">Empyreal Infotech</div>
+                </div>
+                <div class="timeline-duration">January 2025 – June 2025</div>
+              </div>
+
+              <div class="responsibilities-list">
+                <div class="responsibility-item">
+                  <span class="responsibility-bullet">▹</span>
+                  <span>Built commercial web application modules using React.js and Node.js.</span>
+                </div>
+                <div class="responsibility-item">
+                  <span class="responsibility-bullet">▹</span>
+                  <span>Designed REST APIs and implemented secure JWT Authentication.</span>
+                </div>
+                <div class="responsibility-item">
+                  <span class="responsibility-bullet">▹</span>
+                  <span>Optimized database queries in MongoDB to improve load speeds.</span>
+                </div>
+                <div class="responsibility-item">
+                  <span class="responsibility-bullet">▹</span>
+                  <span>Fixed production bugs and participated actively in Agile code reviews.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header reveal reveal-up">
+          <span class="section-tag">MY WORK</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Selection of real-world enterprise platforms and AI products I built.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="glass-card project-card reveal reveal-up delay-1" data-category="fullstack ai">
+            <div class="project-img-wrapper">
+              <div class="project-img-placeholder"
+                style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%); display: flex; align-items: center; justify-content: center; color: #3b82f6; font-size: 3rem;">
+                🚄
+              </div>
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm view-project-detail" data-project="scout-robotics">View
+                  Details</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Scout Robotics</h3>
+              <div class="project-subtitle">Railway Monitoring Dashboard</div>
+              <p class="project-desc">Built a railway monitoring dashboard for a USA-based client with real-time train
+                tracking, telemetry, scheduled reports, and AWS cloud backups.</p>
+
+              <div class="project-tech-chips">
+                <span class="tech-chip">React.js</span>
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">MongoDB</span>
+                <span class="tech-chip">AWS</span>
+              </div>
+
+              <div class="project-footer-links">
+                <button class="project-link-btn view-project-detail" data-project="scout-robotics">
+                  Explore Project <span class="arrow-icon">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="glass-card project-card reveal reveal-up delay-2" data-category="fullstack ai">
+            <div class="project-img-wrapper">
+              <div class="project-img-placeholder"
+                style="background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%); display: flex; align-items: center; justify-content: center; color: #10b981; font-size: 3rem;">
+                🩺
+              </div>
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm view-project-detail" data-project="ove">View Details</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">OVE</h3>
+              <div class="project-subtitle">Women's Health Platform</div>
+              <p class="project-desc">Complete healthcare platform supporting thousands of active users with OpenAI
+                powered AI Health Assistant, Stripe payments, and Firebase notifications.</p>
+
+              <div class="project-tech-chips">
+                <span class="tech-chip">React.js</span>
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">OpenAI API</span>
+                <span class="tech-chip">Stripe</span>
+              </div>
+
+              <div class="project-footer-links">
+                <button class="project-link-btn view-project-detail" data-project="ove">
+                  Explore Project <span class="arrow-icon">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="glass-card project-card reveal reveal-up delay-3" data-category="fullstack ai realtime">
+            <div class="project-img-wrapper">
+              <div class="project-img-placeholder"
+                style="background: linear-gradient(135deg, #701a75 0%, #0f172a 100%); display: flex; align-items: center; justify-content: center; color: #ec4899; font-size: 3rem;">
+                🤖
+              </div>
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm view-project-detail" data-project="chance-ai">View
+                  Details</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Chance AI</h3>
+              <div class="project-subtitle">AI Dating Platform</div>
+              <p class="project-desc">AI-powered social dating app featuring AI profile generation, low-latency
+                Socket.IO real-time chat, and Stripe subscription tier management.</p>
+
+              <div class="project-tech-chips">
+                <span class="tech-chip">TypeScript</span>
+                <span class="tech-chip">React</span>
+                <span class="tech-chip">Socket.IO</span>
+                <span class="tech-chip">OpenAI</span>
+              </div>
+
+              <div class="project-footer-links">
+                <button class="project-link-btn view-project-detail" data-project="chance-ai">
+                  Explore Project <span class="arrow-icon">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="glass-card project-card reveal reveal-up delay-4" data-category="fullstack realtime">
+            <div class="project-img-wrapper">
+              <div class="project-img-placeholder"
+                style="background: linear-gradient(135deg, #164e63 0%, #0f172a 100%); display: flex; align-items: center; justify-content: center; color: #06b6d4; font-size: 3rem;">
+                🚴
+              </div>
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm view-project-detail" data-project="arcc">View Details</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">ARCC</h3>
+              <div class="project-subtitle">Ride Analytics Platform</div>
+              <p class="project-desc">Real-time cycling telemetry platform featuring live GPS ride tracking, interactive
+                analytics dashboard, and secure JWT authentication.</p>
+
+              <div class="project-tech-chips">
+                <span class="tech-chip">React.js</span>
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">Socket.IO</span>
+                <span class="tech-chip">JWT</span>
+              </div>
+
+              <div class="project-footer-links">
+                <button class="project-link-btn view-project-detail" data-project="arcc">
+                  Explore Project <span class="arrow-icon">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header reveal reveal-up">
+          <span class="section-tag">ACADEMICS</span>
+          <h2 class="section-title">Education & <span class="gradient-text">Degrees</span></h2>
+          <p class="section-subtitle">Academic qualification in Computer Applications.</p>
+        </div>
+
+        <div class="education-grid">
+          <!-- Degree 1 -->
+          <div class="glass-card education-card reveal reveal-left">
+            <div class="edu-icon-box">🎓</div>
+            <div class="edu-details">
+              <h3>Master of Computer Applications (MCA)</h3>
+              <div class="edu-university">Marwadi University</div>
+              <div class="edu-location">Rajkot, Gujarat, India</div>
+            </div>
+          </div>
+
+          <!-- Degree 2 -->
+          <div class="glass-card education-card reveal reveal-right">
+            <div class="edu-icon-box">📜</div>
+            <div class="edu-details">
+              <h3>Bachelor of Computer Applications (BCA)</h3>
+              <div class="edu-university">Saurashtra University</div>
+              <div class="edu-location">Rajkot, Gujarat, India</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header reveal reveal-up">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2 class="section-title">Let's Work <span class="gradient-text">Together</span></h2>
+          <p class="section-subtitle">Have a project in mind or interested in hiring? Drop a message below!</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-list reveal reveal-left">
+            <div class="glass-card contact-card-item">
+              <div class="contact-icon-box">📧</div>
+              <div class="contact-text-group">
+                <label>Email Address</label>
+                <a href="mailto:jaysitapara5103@gmail.com">jaysitapara5103@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="glass-card contact-card-item">
+              <div class="contact-icon-box">📞</div>
+              <div class="contact-text-group">
+                <label>Phone / WhatsApp</label>
+                <a href="tel:+919104297422">+91 9104297422</a>
+              </div>
+            </div>
+
+            <div class="glass-card contact-card-item">
+              <div class="contact-icon-box">📍</div>
+              <div class="contact-text-group">
+                <label>Location</label>
+                <span>Rajkot, Gujarat, India</span>
+              </div>
+            </div>
+
+            <div class="glass-card contact-card-item">
+              <div class="contact-icon-box">🌐</div>
+              <div class="contact-text-group">
+                <label>Social Profiles</label>
+                <div style="display: flex; gap: 1rem; margin-top: 0.3rem;">
+                  <a href="https://linkedin.com/in/jay-sitapara" target="_blank"
+                    style="color: var(--accent); font-weight: 600;">LinkedIn &rarr;</a>
+                  <a href="https://github.com/jaysitapara" target="_blank"
+                    style="color: var(--accent); font-weight: 600;">GitHub &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card contact-form-card reveal reveal-right">
+            <form id="contact-form">
+              <input type="hidden" name="access_key" value="216110f0-8c29-450f-90e9-742e97914f62">
+              <input type="hidden" name="subject" value="New Portfolio Contact Message from JaySitapara.com">
+              <input type="hidden" name="from_name" value="Jay Sitapara Portfolio">
+
+              <div id="form-alert" class="form-alert"></div>
+
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name *</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Alex Mercer" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. alex@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message *</label>
+                <textarea id="message" name="message" class="form-textarea"
+                  placeholder="Tell me about your project or job opportunity..." required></textarea>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn btn-primary ripple" style="width: 100%;">
+                <span id="btn-text">Send Message &rarr;</span>
+                <span id="btn-spinner" style="display: none;">Sending Message...</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#hero" class="logo">
+        Portfolio<span class="logo-dot"></span>
+      </a>
+
+      <p class="footer-text">
+        &copy; 2026 Jay Sitapara. Handcrafted with HTML5, CSS3 & Vanilla JavaScript.
+      </p>
+
+      <div id="live-clock" class="footer-clock">
+        Rajkot, IN
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+    &uarr;
+  </button>
+
+  <!-- Project & Resume Modal Popup -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="glass-card modal-content">
+      <button id="modal-close-btn" class="modal-close-btn">&times;</button>
+      <div id="modal-container"></div>
+    </div>
+  </div>
+
+  <!-- Vanilla Scripts -->
+  <script src="js/typing.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
